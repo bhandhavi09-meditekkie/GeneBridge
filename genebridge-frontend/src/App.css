@@ -1,0 +1,222 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: linear-gradient(135deg, #e8f7f2, #f6fbff);
+  color: #234;
+}
+
+.page {
+  max-width: 1150px;
+  margin: auto;
+  padding: 45px 22px;
+}
+
+.hero-card {
+  max-width: 700px;
+  margin: auto;
+  text-align: center;
+  background: #ffffff;
+  padding: 42px 38px;
+  border-radius: 24px;
+  box-shadow: 0 12px 35px rgba(45, 120, 100, 0.16);
+  border: 1px solid #d8eee7;
+}
+
+h1 {
+  color: #0f6b57;
+  font-size: 54px;
+  margin: 0 0 14px 0;
+  letter-spacing: -1px;
+  line-height: 1.05;
+}
+
+.subtitle {
+  color: #6b7c93;
+  font-size: 18px;
+  margin: 0 0 32px 0;
+}
+
+label {
+  display: block;
+  margin-top: 18px;
+  font-weight: 700;
+  color: #4f6373;
+  text-align: left;
+}
+
+input {
+  width: 100%;
+  padding: 14px;
+  margin-top: 8px;
+  border-radius: 12px;
+  border: 1px solid #b7d9cf;
+  font-size: 16px;
+  box-sizing: border-box;
+  background: #f4fbf8;
+  color: #145c4a;
+  outline: none;
+}
+
+input:focus {
+  border-color: #16876d;
+  box-shadow: 0 0 0 4px rgba(22, 135, 109, 0.12);
+}
+
+button {
+  width: 100%;
+  margin-top: 26px;
+  padding: 15px;
+  background: linear-gradient(135deg, #16876d, #20a987);
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 17px;
+  font-weight: 700;
+  cursor: pointer;
+  box-shadow: 0 8px 18px rgba(22, 135, 109, 0.25);
+}
+
+button:hover {
+  background: linear-gradient(135deg, #0f6b57, #16876d);
+}
+
+.error-box {
+  margin-top: 20px;
+  padding: 14px;
+  background: #ffe8e8;
+  color: #b00020;
+  border-radius: 12px;
+  border: 1px solid #ffc7c7;
+}
+
+.result-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+  margin-top: 35px;
+}
+
+.result-card {
+  background: #ffffff;
+  padding: 30px;
+  border-radius: 24px;
+  box-shadow: 0 12px 35px rgba(45, 120, 100, 0.14);
+  border: 1px solid #d8eee7;
+  text-align: center;
+}
+
+.result-card h2 {
+  color: #0f6b57;
+  margin-top: 0;
+  font-size: 27px;
+}
+
+.result-card p {
+  line-height: 1.6;
+  font-size: 16px;
+  color: #405464;
+}
+
+.result-card b {
+  color: #145c4a;
+}
+
+.link-button {
+  display: inline-block;
+  margin-top: 18px;
+  padding: 12px 18px;
+  background: #16876d;
+  color: white;
+  text-decoration: none;
+  border-radius: 12px;
+  font-weight: 700;
+}
+
+.link-button:hover {
+  background: #0f6b57;
+}
+
+.link-button.blue {
+  background: #4c7df0;
+}
+
+.link-button.blue:hover {
+  background: #315fd0;
+}
+
+.chromosome-box {
+  margin-top: 22px;
+  padding: 22px;
+  background: #f5fffb;
+  border: 1px solid #cce8df;
+  border-radius: 18px;
+}
+
+.chromosome-title {
+  font-weight: 700;
+  margin-bottom: 18px;
+  color: #0f6b57;
+  text-align: center;
+}
+
+.chromosome-bar {
+  height: 28px;
+  background: linear-gradient(to right, #d7ebff, #8fc7ff, #d7ebff);
+  border-radius: 30px;
+  position: relative;
+  margin: 42px 0 18px;
+  border: 1px solid #86b8e8;
+}
+
+.marker {
+  position: absolute;
+  left: 50%;
+  top: -14px;
+  width: 20px;
+  height: 56px;
+  background: #ff6b6b;
+  border-radius: 14px;
+  transform: translateX(-50%);
+  box-shadow: 0 5px 15px rgba(255, 107, 107, 0.35);
+}
+
+.marker span {
+  position: absolute;
+  top: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  background: #ff6b6b;
+  color: white;
+  padding: 5px 9px;
+  border-radius: 8px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.position-labels {
+  display: flex;
+  justify-content: space-between;
+  color: #6b7c93;
+  font-size: 13px;
+}
+
+.location-missing {
+  margin-top: 22px;
+  padding: 20px;
+  background: #fff9e8;
+  color: #7a5a00;
+  border: 1px solid #f2d48a;
+  border-radius: 16px;
+  line-height: 1.6;
+}
+
+@media (max-width: 850px) {
+  .result-grid {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    font-size: 42px;
+  }
+}
