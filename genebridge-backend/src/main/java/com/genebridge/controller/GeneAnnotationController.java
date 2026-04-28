@@ -1,6 +1,5 @@
 package com.genebridge.controller;
 
-import com.genebridge.exception.AnnotationException;
 import com.genebridge.model.AnnotationResult;
 import com.genebridge.model.GeneAnnotation;
 import com.genebridge.service.AnnotationService;
@@ -9,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(origins="*")
 public class GeneAnnotationController {
 
     @Autowired
@@ -21,7 +20,9 @@ public class GeneAnnotationController {
     }
 
     @PostMapping("/annotate")
-    public AnnotationResult annotateGene(@RequestBody GeneAnnotation input) {
+    public AnnotationResult annotateGene(
+        @RequestBody GeneAnnotation input
+    ) {
         return annotationService.annotateGene(input);
     }
 }
