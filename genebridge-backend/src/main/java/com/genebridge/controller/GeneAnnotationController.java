@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api")
-@CrossOrigin(origins="*")
+@CrossOrigin(origins = "*")
 public class GeneAnnotationController {
 
     @Autowired
@@ -20,9 +20,7 @@ public class GeneAnnotationController {
     }
 
     @PostMapping("/annotate")
-    public AnnotationResult annotateGene(
-        @RequestBody GeneAnnotation input
-    ) {
+    public AnnotationResult annotateGene(@RequestBody GeneAnnotation input) {
         return annotationService.annotateGene(input);
     }
 }
